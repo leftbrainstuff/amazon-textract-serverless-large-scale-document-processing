@@ -312,7 +312,7 @@ export class TextractPipelineStack extends cdk.Stack {
     //--------------
     // PDF Generator
     const pdfGenerator = new lambda.Function(this, 'PdfGenerator', {
-      runtime: lambda.Runtime.JAVA_8,
+      runtime: lambda.Runtime.JAVA_11,
       code: lambda.Code.fromAsset('lambda/pdfgenerator'),
       handler: 'DemoLambdaV2::handleRequest',
       memorySize: 3000,
